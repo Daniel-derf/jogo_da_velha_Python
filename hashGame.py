@@ -6,53 +6,50 @@ class JogoDaVelha:
         self.jogador_um_posicoes = [False] * 9
         self.jogador_dois_posicoes = [False] * 9
         self.tabuleiro_posicoes = [False] * 9
-        self.jogador_um = False
-        self.jogador_dois = False
+        self.jogador_X = False
+        self.jogador_O = False
         self.jogo_ativo = False
 
     def iniciar(self):
-        self.jogador_um = True
+        self.jogador_X = True
         self.jogo_ativo = True
 
     def terminar_jogo(self):
         self.jogo_ativo = False
 
     def trocar_jogador(self):
-        if self.jogador_um:
-            self.jogador_um = False
-            self.jogador_dois = True
+        if self.jogador_X:
+            self.jogador_X = False
+            self.jogador_O = True
         else:
-            self.jogador_um = True
-            self.jogador_dois = False
+            self.jogador_X = True
+            self.jogador_O = False
 
     def get_status(self):
         return self.jogo_ativo
-    
+
     def mostrar_tabuleiro(self):
         print('_' * 2 + '|' + '_' * 2 + '|' + '_' * 2 + '\n' + '_' * 2 + '|' + '_' * 2 + '|' + '_' * 2 + '\n' + ' ' * 2 + '|' + ' ' * 2 + '|' + ' ' * 2)
 
     def selecionar_jogador(self, numero_do_jogador):
         if numero_do_jogador == 1:
-            self.jogador_um = True
+            self.jogador_X = True
         else:
-            self.jogador_dois = True
+            self.jogador_O = True
 
     def verificar_posicao_livre(self, posicao):
-        if self.tabuleiro_posicoes[posicao]:
-            return False
-        else:
-            return True
+        return self.tabuleiro_posicoes[posicao] is False
 
     def selecionar_posicao(self, posicao):
-        if self.jogador_um:
+        if self.jogador_X:
             self.jogador_um_posicoes[posicao] = True
         else:
             self.jogador_dois_posicoes[posicao] = True
         self.tabuleiro_posicoes[posicao] = True
 
     def verificar_uma_possibilidade_de_vitoria(self, posicoes_no_tabuleiro):
-        if all(self.jogador_um_posicoes[i] for i in posicoes_no_tabuleiro) or all(self.jogador_dois_posicoes[i] for i in posicoes_no_tabuleiro):
-            return True
+        return all(self.jogador_um_posicoes[i] for i in posicoes_no_tabuleiro) \
+               or all(self.jogador_dois_posicoes[i] for i in posicoes_no_tabuleiro)
 
     def verificar_todas_possibilidades_de_vitoria(self):
         posicoes_de_vitoria = [
@@ -68,11 +65,11 @@ class JogoDaVelha:
         self.jogador_dois_posicoes = [False] * 9
         self.tabuleiro_posicoes = [False] * 9
 
-    def verificar_velha(self):
-        if False in self.tabuleiro_posicoes:
-            return False
-        else:
-            return True
+    def verificar_se_deu_velha(self):
+        return not False in self.tabuleiro_posicoes
+
+    def nao_esta_na_primeira_jogada(self):
+        return True in self.tabuleiro_posicoes
 
 class JogoDaVelhaConcreto(JogoDaVelha):
     def __init__(self):
@@ -87,16 +84,14 @@ class JogoDaVelhaConcreto(JogoDaVelha):
 
     def jogar(self):
         self.iniciar()
+        while self.get_status():
+            self.continuar_jogo()
+            self.jogo_terminou()
 
     def continuar_jogo(self):
         if self.nao_esta_na_primeira_jogada():
             self.trocar_jogador()
         self.escolher_jogada()
-
-    def nao_esta_na_primeira_jogada(self):
-        if True in self.tabuleiro_posicoes:
-            return True
-        return False
 
     def escolher_jogada(self):
         self.exibir_tabuleiro()
@@ -114,7 +109,7 @@ class JogoDaVelhaConcreto(JogoDaVelha):
         print(self.tabuleiro_visual[6:])
 
     def exibir_jogador_da_vez(self):
-        if self.jogador_um:
+        if self.jogador_X:
             print('Jogador UM')
         else:
             print('Jogador DOIS')
@@ -149,7 +144,7 @@ class JogoDaVelhaConcreto(JogoDaVelha):
         self.marcar_tabuleiro_visual(self.jogada)
 
     def marcar_tabuleiro_visual(self, posicao):
-        if self.jogador_um:
+        if self.jogador_X:
             self.tabuleiro_visual[posicao] = 'X'
         else:
             self.tabuleiro_visual[posicao] = 'O'
@@ -159,11 +154,10 @@ class JogoDaVelhaConcreto(JogoDaVelha):
             self.terminar_jogo()
         elif self.ver_se_deu_velha():
             self.terminar_jogo()
-        return False
 
     def ver_se_ganhou(self):
         if self.verificar_todas_possibilidades_de_vitoria():
-            if self.jogador_um:
+            if self.jogador_X:
                 print('Jogador um ganhou!')
             else:
                 print('Jogador dois ganhou!')
@@ -172,7 +166,7 @@ class JogoDaVelhaConcreto(JogoDaVelha):
             return False
 
     def ver_se_deu_velha(self):
-        if self.verificar_velha():
+        if self.verificar_se_deu_velha():
             print('O jogo deu velha!')
             return True
 
@@ -180,9 +174,6 @@ class JogoDaVelhaConcreto(JogoDaVelha):
 def jogoDaVelha():
     primeiro_jogo = JogoDaVelhaConcreto()
     primeiro_jogo.jogar()
-    while(primeiro_jogo.get_status()):
-        primeiro_jogo.continuar_jogo()
-        primeiro_jogo.jogo_terminou()
 
 jogoDaVelha()
 
