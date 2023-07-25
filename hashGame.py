@@ -1,4 +1,6 @@
 # jogo da velha em python
+import sys
+import io
 
 
 class JogoDaVelha:
@@ -47,9 +49,9 @@ class JogoDaVelha:
             self.jogador_dois_posicoes[posicao] = True
         self.tabuleiro_posicoes[posicao] = True
 
-    def verificar_uma_possibilidade_de_vitoria(self, posicoes_no_tabuleiro):
-        return all(self.jogador_um_posicoes[i] for i in posicoes_no_tabuleiro) \
-               or all(self.jogador_dois_posicoes[i] for i in posicoes_no_tabuleiro)
+    def verificar_uma_possibilidade_de_vitoria(self, posicoes_no_tabuleiro_para_vitoria):
+        return all(self.jogador_um_posicoes[posicao] for posicao in posicoes_no_tabuleiro_para_vitoria) \
+               or all(self.jogador_dois_posicoes[posicao] for posicao in posicoes_no_tabuleiro_para_vitoria)
 
     def verificar_todas_possibilidades_de_vitoria(self):
         posicoes_de_vitoria = [
@@ -71,7 +73,7 @@ class JogoDaVelha:
     def nao_esta_na_primeira_jogada(self):
         return True in self.tabuleiro_posicoes
 
-class JogoDaVelhaConcreto(JogoDaVelha):
+class JogoDaVelhaTerminal(JogoDaVelha):
     def __init__(self):
         super().__init__()
         self.tabuleiro_visual = [
@@ -135,7 +137,7 @@ class JogoDaVelhaConcreto(JogoDaVelha):
 
     def validar_valor_ja_selecionado(self):
         if self.verificar_posicao_livre(self.jogada):
-            return
+            return True
         self.posicao_esta_livre = False
         raise ValueError()
 
@@ -150,10 +152,9 @@ class JogoDaVelhaConcreto(JogoDaVelha):
             self.tabuleiro_visual[posicao] = 'O'
 
     def jogo_terminou(self):
-        if self.ver_se_ganhou():
+        if self.ver_se_ganhou() or self.ver_se_deu_velha():
             self.terminar_jogo()
-        elif self.ver_se_deu_velha():
-            self.terminar_jogo()
+            return True
 
     def ver_se_ganhou(self):
         if self.verificar_todas_possibilidades_de_vitoria():
@@ -172,10 +173,16 @@ class JogoDaVelhaConcreto(JogoDaVelha):
 
 
 def jogoDaVelha():
-    primeiro_jogo = JogoDaVelhaConcreto()
+    primeiro_jogo = JogoDaVelhaTerminal()
     primeiro_jogo.jogar()
 
-jogoDaVelha()
+
+
+
+
+
+
+
 
 
 

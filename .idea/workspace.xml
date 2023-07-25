@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4dbd542-74e6-423b-a169-1d66e241d590" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JogoDaVelhaTerminalTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JogoDaVelhaTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hashGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashGame.py" afterDir="false" />
     </list>
@@ -25,7 +27,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestCodes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -39,75 +41,84 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hashGame">
-    <configuration name="classTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_exibir_jogador_da_vez">
+    <configuration name="Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="NewProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="hashGame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_exibir_jogador_da_vez" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="NewProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hashGame.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_exibir_jogador_da_vez&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="index" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="NewProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/index.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar_tabela_excedida" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="NewProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar_tabela_excedida&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_verificar_print" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="NewProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_verificar_print&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hashGame" />
-        <item itemvalue="Python.classTest" />
-        <item itemvalue="Python.index" />
+        <item itemvalue="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_exibir_jogador_da_vez" />
+        <item itemvalue="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal" />
+        <item itemvalue="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar_tabela_excedida" />
+        <item itemvalue="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_pedir_jogada_e_validar" />
+        <item itemvalue="Python tests.Unittests for JogoDaVelhaTerminalTest.TestJogoDaVelhaTerminal.test_verificar_print" />
       </list>
     </recent_temporary>
   </component>
